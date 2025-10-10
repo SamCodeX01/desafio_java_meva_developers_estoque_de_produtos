@@ -3,8 +3,8 @@ public  class Eletronicos extends Produtos {
     private int garantiaMeses;
 
     //CONSTRUTOR
-    public Eletronicos(int codigo, String nomeProduto, double preço, int qtdEstoque, int garantiaMeses){
-        super(codigo, nomeProduto, preço, qtdEstoque);
+    public Eletronicos(String nomeProduto, double preco, int qtdEstoque, int garantiaMeses){
+        super(nomeProduto, preco, qtdEstoque);
         this.garantiaMeses = garantiaMeses;
     }
 

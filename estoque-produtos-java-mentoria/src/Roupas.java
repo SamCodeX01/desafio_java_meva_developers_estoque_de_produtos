@@ -3,8 +3,8 @@
         private float tamanho;
         private String cor;
 
-        public Roupas(int codigo, String nomeProduto, double preço, int qtdEstoque, float tamanho, String cor) {
-            super(codigo, nomeProduto, preço, qtdEstoque);
+        public Roupas(String nomeProduto, double preço, int qtdEstoque, float tamanho, String cor) {
+            super(nomeProduto, preço, qtdEstoque);
             this.tamanho = tamanho;
             this.cor = cor;
         }

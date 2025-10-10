@@ -2,8 +2,8 @@ public class Alimentos extends Produtos{
     private String dataFabricacao;
     private String dataVencimento;
 
-    public Alimentos(int codigo, String nomeProduto, double preço, int qtdEstoque, String dataFabricacao, String dataVencimento){
-        super(codigo, nomeProduto, preço, qtdEstoque); //super() chama o construtor da superclasse. Permitindo acessar seus construtores, métodos e atributos.
+    public Alimentos(String nomeProduto, double preço, int qtdEstoque, String dataFabricacao, String dataVencimento){
+        super(nomeProduto, preço, qtdEstoque); //super() chama o construtor da superclasse. Permitindo acessar seus construtores, métodos e atributos.
         this.dataFabricacao = dataFabricacao;
         this.dataVencimento = dataVencimento;
     }

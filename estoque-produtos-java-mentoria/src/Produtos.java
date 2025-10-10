@@ -1,5 +1,13 @@
 import java.util.List;
 
+public interface Produtos {
+
+    public String adicionarProdutos();
+
+}
+
+/*import java.util.List;
+
 public class Produtos {
     private static int contador = 0;
     private int codigo;
@@ -7,9 +15,10 @@ public class Produtos {
     private double preço;
     private int qtdEstoque;
 
-    public Produtos(int codigo, String nomeProduto, double preço, int qtdEstoque) {
+    public Produtos(String nomeProduto, double preço, int qtdEstoque) {
         contador++;
-        this.codigo = Integer.parseInt(String.format("%04d", contador));
+//        this.codigo = Integer.parseInt(String.format("%04d", contador));
+        this.codigo = contador;
         //Converte o valor do contador para uma "string" com exatamente 4 dígitos, preenchendo com zeros à esquerda.
         this.nomeProduto = nomeProduto;
         this.preço = preço;
@@ -51,6 +60,7 @@ public class Produtos {
         this.qtdEstoque = qtdEstoque;
     }
 }
+*/
 
 /*
 
