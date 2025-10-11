@@ -1,4 +1,4 @@
-public class Alimentos extends Produtos{
+public class Alimentos extends Produtos {
     private String dataFabricacao;
     private String dataVencimento;
 

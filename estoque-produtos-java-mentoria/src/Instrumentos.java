@@ -1,8 +1,8 @@
-public class Instrumentos extends Produtos{
+public class Instrumentos {
     private String tipo;
 
     public Instrumentos(String nomeProduto, double preço, int qtdEstoque, String tipo) {
-        super(nomeProduto, preço, qtdEstoque);
+      // super(nomeProduto, preço, qtdEstoque);
         this.tipo = tipo;
     }
 
