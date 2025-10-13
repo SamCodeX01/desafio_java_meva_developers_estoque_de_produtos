@@ -2,6 +2,14 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
+/*5. Faltam atributos específicos:
+Alimentos: dataFabricacao, dataVencimento
+
+Eletronicos: garantiaMeses
+
+Roupas: tamanho, cor
+
+Instrumentos: tipo*/
 public class Main {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
@@ -33,7 +41,6 @@ public class Main {
                             "2 - Eletrônicos
                             "3 - Instrumentos
                             "4 - Roupas
-                            "5 - Roupas
                             """);
                     System.out.print("Digite uma opção: ");
                     int op = sc.nextInt();
