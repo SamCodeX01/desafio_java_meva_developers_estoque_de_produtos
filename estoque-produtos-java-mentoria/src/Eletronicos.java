@@ -1,10 +1,10 @@
 
-public  class Eletronicos {
+public  class Eletronicos extends Produtos  {
     private int garantiaMeses;
 
     //CONSTRUTOR
     public Eletronicos(String nomeProduto, double preco, int qtdEstoque, int garantiaMeses){
-        //super(nomeProduto, preco, qtdEstoque);
+        super(nomeProduto, preco, qtdEstoque);
         this.garantiaMeses = garantiaMeses;
     }
 
@@ -17,5 +17,6 @@ public  class Eletronicos {
     public void setGarantiaMeses(int garantiaMeses){
         this.garantiaMeses = garantiaMeses;
     }
+
 
 }

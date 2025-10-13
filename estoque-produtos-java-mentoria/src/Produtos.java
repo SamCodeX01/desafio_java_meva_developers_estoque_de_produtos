@@ -49,6 +49,23 @@ public class Produtos {
     public void setQtdEstoque(int qtdEstoque) {
         this.qtdEstoque = qtdEstoque;
     }
+
+    //Métodos/Funçoes
+
+//    public String adicionarProdutos(){
+//        return "System.out.println()";
+//    };
+//    public void removerProdutos();
+//    public void listarProdutos();
+//    public void buscarProdutos();
+//    public void atualizarQuantidade();
+//
+//    public void verificarGarantia();
+//
+//    public void verificarValidade();
+
+
+
 }
 
 

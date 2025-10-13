@@ -5,13 +5,11 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        List<Metodos> list = new ArrayList<>();
 
         while (true) {
 
             System.out.println("""
-                    \n***MENU*** 
-                    
+                    \n***************|MENU|*************** 
                          "1 - Adicionar Produto. 
                          "2 - Buscar produtos por código.
                          "3 - Remover produtos do estoque.
@@ -27,7 +25,8 @@ public class Main {
             }
 
             switch (opcao) {
-                case 1:
+                case 1: System.out.println("Você escolheu a opção 1 - Adicionar Produto.");
+
                     System.out.println("Escolha o tipo do produto que deseja adicionar");
                     System.out.println("""
                             
@@ -42,34 +41,52 @@ public class Main {
 
                     switch (op) {
                         case 1:
+                            System.out.println("****Você escolheu adicionar Alimentos!****");
+                            String nomeProduto;
+                            double precoProduto;
+                            int qtdEstoque;
                             //função adicionar produtos
-                            Metodos.
+                            Scanner scanner = new Scanner(System.in);
+                            System.out.print("Digite o produto: ");
+                            nomeProduto = scanner.next();
+                            System.out.print("Digite o preço do produto: ");
+                            precoProduto = scanner.nextDouble();
+                            System.out.print("Digite quantos adicionar ao estoque: ");
+                            qtdEstoque = scanner.nextInt();
+
+                            Produtos p = new Produtos(nomeProduto, precoProduto, qtdEstoque);
+                            GerenciarProdutos.adicionarProdutos(p);
                             break;
                         case 2:
+                            System.out.println("");
                             //"2 - Buscar produtos por código.
                             break;
                         case 3:
+                            System.out.println("");
                             //"3 - Remover produtos do estoque.
                             break;
                         case 4:
+                            System.out.println("");
                             //"4 - Atualizar quantidade de produtos
                             break;
                         case 5:
+                            System.out.println("");
                             //"5 - Listar produtos em estoque.
                             break;
                     }
 
                 case 2:
-                    System.out.println("Função Buscar");
+                    System.out.println("Você escolheu a opção 2 - Buscar produtos por código.");
+                    break;
                 case 3:
-                    System.out.println("Função Remover");
+                    System.out.println("Você escolheu a opção 3 - Remover produtos do estoque.");
                     break;
                 case 4:
-                    System.out.println("Função Atualizar");
+                    System.out.println("Você escolheu a opção 4 - Atualizar quantidade de produtos");
                     break;
                 case 5:
-                    System.out.println("Função Listar");
-                    // GerenciarProdutos.listarProdutos();
+                    System.out.println("Você escolheu a opção 5 - Listar produtos em estoque");
+                    GerenciarProdutos.listarProdutos();
                     break;
 
 //                    System.out.println("Função Adicionar");
