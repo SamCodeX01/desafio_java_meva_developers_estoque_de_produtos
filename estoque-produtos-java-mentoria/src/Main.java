@@ -7,7 +7,6 @@ public class Main {
         Scanner sc = new Scanner(System.in);
 
         while (true) {
-
             System.out.println("""
                     \n***************|MENU|*************** 
                          "1 - Adicionar Produto. 
@@ -33,7 +32,7 @@ public class Main {
                             "1 - Alimentos
                             "2 - Eletrônicos
                             "3 - Instrumentos
-                            "4 - Produtos
+                            "4 - Roupas
                             "5 - Roupas
                             """);
                     System.out.print("Digite uma opção: ");
@@ -42,39 +41,78 @@ public class Main {
                     switch (op) {
                         case 1:
                             System.out.println("****Você escolheu adicionar Alimentos!****");
-                            String nomeProduto;
-                            double precoProduto;
-                            int qtdEstoque;
-                            //função adicionar produtos
-                            Scanner scanner = new Scanner(System.in);
-                            System.out.print("Digite o produto: ");
-                            nomeProduto = scanner.next();
-                            System.out.print("Digite o preço do produto: ");
-                            precoProduto = scanner.nextDouble();
-                            System.out.print("Digite quantos adicionar ao estoque: ");
-                            qtdEstoque = scanner.nextInt();
+                            String nomeAlimento;
+                            double precoAlimento;
+                            int qtdEstoqueAlimento;
 
-                            Produtos p = new Produtos(nomeProduto, precoProduto, qtdEstoque);
-                            GerenciarProdutos.adicionarProdutos(p);
+                            Scanner scanner = new Scanner(System.in);
+
+                            System.out.print("Digite o produto: ");
+                            nomeAlimento = scanner.next();
+                            System.out.print("Digite o preço do produto: ");
+                            precoAlimento = scanner.nextDouble();
+                            System.out.print("Digite quantos adicionar ao estoque: ");
+                            qtdEstoqueAlimento = scanner.nextInt();
+
+                            Alimentos alimentos = new Alimentos(nomeAlimento, precoAlimento, qtdEstoqueAlimento);
+                            //public Alimentos(String nomeProduto, double preço, int qtdEstoque, String dataFabricacao, String dataVencimento){
+                            GerenciarProdutos.adicionarProdutos(alimentos);
                             break;
                         case 2:
-                            System.out.println("");
-                            //"2 - Buscar produtos por código.
+                            System.out.println("****Você escolheu adicionar Eletrônicos!****");
+                            String nomeEletronico;
+                            double precoEletronico;
+                            int qtdEstoqueEletronico;
+                            //int garantiaMeses
+
+                            Scanner scan = new Scanner(System.in);
+                            System.out.print("Digite o produto: ");
+                            nomeEletronico = scan.next();
+                            System.out.print("Digite o preço do produto: ");
+                            precoEletronico = scan.nextDouble();
+                            System.out.print("Digite quantos adicionar ao estoque: ");
+                            qtdEstoqueEletronico = scan.nextInt();
+
+                            Produtos produt = new Produtos(nomeEletronico, precoEletronico, qtdEstoqueEletronico);
+                            GerenciarProdutos.adicionarProdutos(produt);
                             break;
                         case 3:
-                            System.out.println("");
-                            //"3 - Remover produtos do estoque.
+                            System.out.println("****Você escolheu adicionar Instrumentos!****");
+                            String nomeInstrumentos;
+                            double precoInstrumentos;
+                            int qtdEstoqueInstrumentos;
+
+                            Scanner s = new Scanner(System.in);
+                            System.out.print("Digite o produto: ");
+                            nomeInstrumentos = s.next();
+                            System.out.print("Digite o preço do produto: ");
+                            precoInstrumentos = s.nextDouble();
+                            System.out.print("Digite quantos adicionar ao estoque: ");
+                            qtdEstoqueInstrumentos = s.nextInt();
+
+                            Produtos prod = new Produtos(nomeInstrumentos, precoInstrumentos, qtdEstoqueInstrumentos);
+                            GerenciarProdutos.adicionarProdutos(prod);
                             break;
                         case 4:
-                            System.out.println("");
-                            //"4 - Atualizar quantidade de produtos
-                            break;
-                        case 5:
-                            System.out.println("");
-                            //"5 - Listar produtos em estoque.
+                            System.out.println("****Você escolheu adicionar Roupas!****");
+                            String nomeRoupa;
+                            double precoRoupa;
+                            int qtdEstoqueRoupa;
+
+                            Scanner sca = new Scanner(System.in);
+
+                            System.out.print("Digite o produto: ");
+                            nomeRoupa = sca.next();
+                            System.out.print("Digite o preço do produto: ");
+                            precoRoupa = sca.nextDouble();
+                            System.out.print("Digite quantos adicionar ao estoque: ");
+                            qtdEstoqueRoupa = sca.nextInt();
+
+                            Produtos produ = new Produtos(nomeRoupa, precoRoupa, qtdEstoqueRoupa);
+                            GerenciarProdutos.adicionarProdutos(produ);
                             break;
                     }
-
+                    break;
                 case 2:
                     System.out.println("Você escolheu a opção 2 - Buscar produtos por código.");
                     break;
