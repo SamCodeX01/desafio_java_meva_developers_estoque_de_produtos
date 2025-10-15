@@ -48,21 +48,24 @@ public class Main {
                     switch (op) {
                         case 1:
                             System.out.println("****Você escolheu adicionar Alimentos!****");
-                            String nomeAlimento;
+                            String nomeAlimento, dataFabricacaoAlimento, dataVencimentoAlimento;
                             double precoAlimento;
                             int qtdEstoqueAlimento;
 
                             Scanner scanner = new Scanner(System.in);
 
-                            System.out.print("Digite o produto: ");
-                            nomeAlimento = scanner.next();
+                            System.out.print("Digite o nome do alimento: ");
+                                nomeAlimento = scanner.next();
                             System.out.print("Digite o preço do produto: ");
-                            precoAlimento = scanner.nextDouble();
+                                precoAlimento = scanner.nextDouble();
                             System.out.print("Digite quantos adicionar ao estoque: ");
-                            qtdEstoqueAlimento = scanner.nextInt();
+                                qtdEstoqueAlimento = scanner.nextInt();
+                            System.out.print("Digite a data de Fabricação: ");
+                                dataFabricacaoAlimento = scanner.next();
+                            System.out.print("Digite a data de vencimento: ");
+                                dataVencimentoAlimento = scanner.next();
 
-                            Alimentos alimentos = new Alimentos(nomeAlimento, precoAlimento, qtdEstoqueAlimento);
-                            //public Alimentos(String nomeProduto, double preço, int qtdEstoque, String dataFabricacao, String dataVencimento){
+                            Alimentos alimentos = new Alimentos(nomeAlimento, precoAlimento, qtdEstoqueAlimento, dataFabricacaoAlimento, dataVencimentoAlimento);
                             GerenciarProdutos.adicionarProdutos(alimentos);
                             break;
                         case 2:
@@ -73,7 +76,7 @@ public class Main {
                             //int garantiaMeses
 
                             Scanner scan = new Scanner(System.in);
-                            System.out.print("Digite o produto: ");
+                            System.out.print("Digite o nome do produto: ");
                             nomeEletronico = scan.next();
                             System.out.print("Digite o preço do produto: ");
                             precoEletronico = scan.nextDouble();

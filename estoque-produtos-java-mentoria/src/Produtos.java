@@ -50,6 +50,16 @@ public class Produtos {
         this.qtdEstoque = qtdEstoque;
     }
 
+    @Override
+    public String toString() {
+        return "Produtos{" +
+                "codigo=" + codigo +
+                ", nomeProduto='" + nomeProduto + '\'' +
+                ", preço=" + preço +
+                ", qtdEstoque=" + qtdEstoque +
+                '}';
+    }
+
     //Métodos/Funçoes
 
 //    public String adicionarProdutos(){
