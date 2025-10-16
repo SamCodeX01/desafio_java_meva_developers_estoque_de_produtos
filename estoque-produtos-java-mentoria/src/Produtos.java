@@ -50,15 +50,19 @@ public class Produtos {
         this.qtdEstoque = qtdEstoque;
     }
 
-    @Override
-    public String toString() {
-        return "Produtos{" +
-                "codigo=" + codigo +
-                ", nomeProduto='" + nomeProduto + '\'' +
-                ", preço=" + preço +
-                ", qtdEstoque=" + qtdEstoque +
-                '}';
+    public void emitirSom(){
+        System.out.println("Tipo 1");
     }
+
+//    @Override
+//    public String toString() {
+//        return "Produtos{" +
+//                "codigo=" + codigo +
+//                ", nomeProduto='" + nomeProduto + '\'' +
+//                ", preço=" + preço +
+//                ", qtdEstoque=" + qtdEstoque +
+//                '}';
+//    }
 
     //Métodos/Funçoes
 
@@ -127,7 +131,3 @@ O uso de outras classes da java.util além do ArrayList é permitido e
 encorajado para melhorar a funcionalidade e eficiência do sistema.
 
 */
-
-
-
-

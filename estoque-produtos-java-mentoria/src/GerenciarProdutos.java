@@ -11,16 +11,47 @@ public class GerenciarProdutos {
             System.out.println("Produto adicionado com sucesso!");
         }
 
-//        public void removerProdutos(Produtos produtos){
-//            this.listaDeProdutos.remove(produtos);
-//            System.out.println("Produto removido com sucesso!");
+        public static void removerProdutos(Produtos produtos){
+            listaDeProdutos.remove(produtos);
+            System.out.println("Produto " + produtos + " removido com sucesso!");
+        }
+//  public static void removerProdutos(Produtos produtos){
+//            listaDeProdutos.remove(produtos);
+//            System.out.println("Produto " + produtos + " removido com sucesso!");
 //        }
 
         public static void listarProdutos(){
             for(Produtos p: listaDeProdutos){
-                System.out.println("Lista de Produtos abaixo: " + p);
+//                if (p.getTipo().equals("alimento")) {
+                    System.out.println("Lista de Produtos abaixo: ");
+                    System.out.print("Código: " + p.getCodigo());
+                    System.out.print("Produto: " + p.getNomeProduto());
+                    System.out.print("Preço: " + p.getPreço());
+                    System.out.print("Estoque: " + p.getQtdEstoque());
+//                }
+
+//                if (p.getTipo().equals("eletronico")) {
+                    System.out.println("Lista de Produtos abaixo: ");
+                    System.out.print("Código: " + p.getCodigo());
+                    System.out.print("Produto: " + p.getNomeProduto());
+                    System.out.print("Preço: " + p.getPreço());
+                    System.out.print("Estoque: " + p.getQtdEstoque());
+//                }
+
+
             }
         }
+
+    // Método estático que busca um produto pelo código na lista
+    public static Produtos buscarCodigo(int codigoBusca) {
+            for (Produtos p : listaDeProdutos) { //p faz referencia aos objetos instanciados da classe Produtos
+                if (p.getCodigo() == codigoBusca) {// Verifica se o código do produto atual é igual ao código buscado
+                    return p; // Retorna o produto encontrado
+                }
+            }
+            return null; // Retorna null se nenhum produto for encontrado
+
+    }
 
 }
 

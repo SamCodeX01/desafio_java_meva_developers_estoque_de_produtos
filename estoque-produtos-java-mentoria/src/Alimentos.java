@@ -33,12 +33,12 @@ super.toString() → chama o método toString() da classe pai
 Dica para o toString() da classe Alimentos:
 No método toString() da classe Alimentos, você pode chamar super.toString() para incluir as informações da classe pai e adicionar os atributos específicos.
 * */
-
-    @Override
-    public String toString() {
-        return super.toString() + "Alimentos{" +
-                "dataFabricacao='" + dataFabricacao + '\'' +
-                ", dataVencimento='" + dataVencimento + '\'' +
-                '}';
-    }
+//
+//    @Override
+//    public String toString() {
+//        return super.toString() + "Alimentos{" +
+//                "dataFabricacao='" + dataFabricacao + '\'' +
+//                ", dataVencimento='" + dataVencimento + '\'' +
+//                '}';
+//    }
 }

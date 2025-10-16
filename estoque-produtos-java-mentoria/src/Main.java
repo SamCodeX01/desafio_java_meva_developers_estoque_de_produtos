@@ -14,6 +14,12 @@ public class Main {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 
+
+        Produtos p = new Produtos("TEste 1", 1,1);
+        p.emitirSom();
+
+
+
         while (true) {
             System.out.println("""
                     \n***************|MENU|*************** 
@@ -68,6 +74,7 @@ public class Main {
                             Alimentos alimentos = new Alimentos(nomeAlimento, precoAlimento, qtdEstoqueAlimento, dataFabricacaoAlimento, dataVencimentoAlimento);
                             GerenciarProdutos.adicionarProdutos(alimentos);
                             break;
+
                         case 2:
                             System.out.println("****Você escolheu adicionar Eletrônicos!****");
                             String nomeEletronico;
@@ -82,9 +89,13 @@ public class Main {
                             precoEletronico = scan.nextDouble();
                             System.out.print("Digite quantos adicionar ao estoque: ");
                             qtdEstoqueEletronico = scan.nextInt();
+                            System.out.print("Digite a garantia em meses: ");
+                            int garantiaMeses = scan.nextInt();
 
-                            Produtos produt = new Produtos(nomeEletronico, precoEletronico, qtdEstoqueEletronico);
-                            GerenciarProdutos.adicionarProdutos(produt);
+//                          Eletronicos eletro = new Eletronicos("TEste 1", 1,1,1);
+
+                            Eletronicos eletronicos = new Eletronicos(nomeEletronico, precoEletronico, qtdEstoqueEletronico, garantiaMeses);
+                            GerenciarProdutos.adicionarProdutos(eletronicos);
                             break;
                         case 3:
                             System.out.println("****Você escolheu adicionar Instrumentos!****");
@@ -100,8 +111,8 @@ public class Main {
                             System.out.print("Digite quantos adicionar ao estoque: ");
                             qtdEstoqueInstrumentos = s.nextInt();
 
-                            Produtos prod = new Produtos(nomeInstrumentos, precoInstrumentos, qtdEstoqueInstrumentos);
-                            GerenciarProdutos.adicionarProdutos(prod);
+                           // Instrumentos instrumentos = new Instrumentos(nomeInstrumentos, precoInstrumentos, qtdEstoqueInstrumentos);
+                            //GerenciarProdutos.adicionarProdutos(instrumentos);
                             break;
                         case 4:
                             System.out.println("****Você escolheu adicionar Roupas!****");
@@ -118,16 +129,22 @@ public class Main {
                             System.out.print("Digite quantos adicionar ao estoque: ");
                             qtdEstoqueRoupa = sca.nextInt();
 
-                            Produtos produ = new Produtos(nomeRoupa, precoRoupa, qtdEstoqueRoupa);
-                            GerenciarProdutos.adicionarProdutos(produ);
+                           // Roupas roupas = new Roupas(nomeRoupa, precoRoupa, qtdEstoqueRoupa);
+                           // GerenciarProdutos.adicionarProdutos(roupas);
                             break;
                     }
                     break;
                 case 2:
-                    System.out.println("Você escolheu a opção 2 - Buscar produtos por código.");
+                    System.out.println("*****Você escolheu a opção 2 - Buscar produtos por código.*****");
+                    System.out.print("Digite o código do produto a ser buscado: ");
+                    int codProd = sc.nextInt();
+                    GerenciarProdutos.buscarCodigo(codProd);
                     break;
                 case 3:
-                    System.out.println("Você escolheu a opção 3 - Remover produtos do estoque.");
+                    System.out.println("****Você escolheu a opção 3 - Remover produtos do estoque.*****");
+                    System.out.print("Digite o produto a ser removido: ");
+                    String prodRemov = sc.next();
+                   // GerenciarProdutos.removerProdutos(prodRemov);
                     break;
                 case 4:
                     System.out.println("Você escolheu a opção 4 - Atualizar quantidade de produtos");
