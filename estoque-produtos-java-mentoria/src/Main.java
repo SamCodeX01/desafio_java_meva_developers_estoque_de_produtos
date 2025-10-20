@@ -135,7 +135,10 @@ public class Main {
                         System.out.println("Você escolheu a opção 2 - Buscar produtos por código.");
                         break;
                     case 3:
-                        System.out.println("Você escolheu a opção 3 - Remover produtos do estoque.");
+                        System.out.println("****Você escolheu a opção 3 - Remover produtos do estoque.****");
+                        System.out.print("\nDigite o código do produto a ser removido: ");
+                        int codRemover = sc.nextInt();
+                        GerenciarProdutos.removerProdutos(codRemover);
                         break;
                     case 4:
                         System.out.println("Você escolheu a opção 4 - Atualizar quantidade de produtos");

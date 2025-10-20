@@ -11,10 +11,16 @@ public class GerenciarProdutos {
             System.out.println("\nProduto adicionado com sucesso!");
         }
 
-//        public void removerProdutos(Produtos produtos){
-//            this.listaDeProdutos.remove(produtos);
-//            System.out.println("Produto removido com sucesso!");
-//        }
+        public static void removerProdutos(int cod){
+            for(Produtos p: listaDeProdutos){
+                if(cod == p.getCodigo()){
+                 listaDeProdutos.remove(p);  // ← Remove o OBJETO p, não o código
+                 System.out.println("Produto removido com sucesso! código: " + cod);
+                 return; // Sai do método após remover
+                }
+            }
+            System.out.println("Produto não encontrado Código: " + cod);
+        }
 
         public static void listarProdutos(){
             for(Produtos p: listaDeProdutos){
