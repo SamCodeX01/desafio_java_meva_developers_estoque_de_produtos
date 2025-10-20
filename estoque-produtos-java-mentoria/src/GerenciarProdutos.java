@@ -8,119 +8,50 @@ public class GerenciarProdutos {
         public static void adicionarProdutos(Produtos produtos){
             listaDeProdutos.add(produtos);
 
-            System.out.println("Produto adicionado com sucesso!");
+            System.out.println("\nProduto adicionado com sucesso!");
         }
 
-        public static void removerProdutos(Produtos produtos){
-            listaDeProdutos.remove(produtos);
-            System.out.println("Produto " + produtos + " removido com sucesso!");
-        }
-//  public static void removerProdutos(Produtos produtos){
-//            listaDeProdutos.remove(produtos);
-//            System.out.println("Produto " + produtos + " removido com sucesso!");
+//        public void removerProdutos(Produtos produtos){
+//            this.listaDeProdutos.remove(produtos);
+//            System.out.println("Produto removido com sucesso!");
 //        }
 
         public static void listarProdutos(){
             for(Produtos p: listaDeProdutos){
-//                if (p.getTipo().equals("alimento")) {
-                    System.out.println("Lista de Produtos abaixo: ");
-                    System.out.print("Código: " + p.getCodigo());
-                    System.out.print("Produto: " + p.getNomeProduto());
-                    System.out.print("Preço: " + p.getPreço());
-                    System.out.print("Estoque: " + p.getQtdEstoque());
-//                }
+                System.out.println("------------------------");
+                System.out.println("Código: " + p.getCodigo());
+                System.out.println("Nome do Produto: " + p.getNomeProduto());
+                System.out.println("Preço: " + p.getPreço());
+                System.out.println("Estoque: " + p.getQtdEstoque());
 
-//                if (p.getTipo().equals("eletronico")) {
-                    System.out.println("Lista de Produtos abaixo: ");
-                    System.out.print("Código: " + p.getCodigo());
-                    System.out.print("Produto: " + p.getNomeProduto());
-                    System.out.print("Preço: " + p.getPreço());
-                    System.out.print("Estoque: " + p.getQtdEstoque());
-//                }
-
-
-            }
-        }
-
-    // Método estático que busca um produto pelo código na lista
-    public static Produtos buscarCodigo(int codigoBusca) {
-            for (Produtos p : listaDeProdutos) { //p faz referencia aos objetos instanciados da classe Produtos
-                if (p.getCodigo() == codigoBusca) {// Verifica se o código do produto atual é igual ao código buscado
-                    return p; // Retorna o produto encontrado
+                //Verifica o tipo específico do produto
+                if(p instanceof Alimentos){//Se p for uma instância de Alimentos, se p pertence à família Alimentos, verifica se o produto p é da classe Alimentos
+                    Alimentos alimento = (Alimentos) p; //Uma variável do tipo Alimentos chamada 'alimento', que recebe o casting (Alimentos) que converte o p em Alimentos"
+                    System.out.println("Data de Fabricação: " + alimento.getDataFabricacao());
+                    System.out.println("Data de Vencimento: " + alimento.getDataVencimento());
+                    System.out.println("Tipo: Alimento ");
                 }
+
+                if(p instanceof Eletronicos){
+                    Eletronicos eletronicos = (Eletronicos) p; //(Eletronicos) força o p a virar um Eletronicos
+                    System.out.println("Meses de garantia: " + eletronicos.getGarantiaMeses());
+                    System.out.println("Tipo: Eletrônico");
+                }
+                if(p instanceof Instrumentos){
+                    Instrumentos instrumentos = (Instrumentos) p;
+                    System.out.println("Tipo do Instrumento: " + instrumentos.getTipo());
+                    System.out.println("Tipo: Instrumento");
+                }
+                if(p instanceof Roupas){
+                    Roupas roupas = (Roupas) p;
+                    System.out.println("Tamanho da Roupa: " + roupas.getTamanho());
+                    System.out.println("Cor da Roupa: " + roupas.getCor());
+                    System.out.println("Tipo: Roupa");
+                }
+                System.out.println("------------------------");
+
             }
-            return null; // Retorna null se nenhum produto for encontrado
-
-    }
-
-}
-
-
-/*
-
-public class Main {
-    public static void main(String[] args) {
-
-        List<Produtos> produtosss = new ArrayList<>();
-        produtosss.add(new Instrumentos("Violino", 6));
-        produtosss.add(new Instrumentos("Flauta", 2));
-        produtosss.add(new Comida("Pudim", 2));
-
-        for(Produtos p: produtosss){
-//            System.out.println(p.nome);
-//            System.out.println(p.qtd);
-            p.tocar();
         }
 
-    }
 }
 
-
-public interface Produtos {
-
-    public void tocar();
-}
-
-
-
-public class Produtosss implements Produtos{
-    public String nome;
-    public int qtd;
-
-    public Produtosss(String nome, int qtd) {
-        this.nome = nome;
-        this.qtd = qtd;
-    }
-
-    public void tocar(){
-        System.out.println("Tocando instrumento!");
-    }
-
-
-
-
-public class Instrumentos implements Produtos{
-    public String nome;
-    public int qtd;
-
-    public Instrumentos(String nome, int qtd) {
-        this.nome = nome;
-        this.qtd = qtd;
-    }
-
-    @Override
-    public void tocar() {
-        System.out.println("TOCANDO INSTRUMENTOS!");
-    }
-}
-
-
-}
-
-
-
-
-
-
-
-*/

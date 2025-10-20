@@ -11,15 +11,12 @@ public class Alimentos extends Produtos{
     public String getDataFabricacao() {
         return dataFabricacao;
     }
-
     public String getDataVencimento() {
         return dataVencimento;
     }
-
     public void setDataFabricacao(String dataFabricacao) {
         this.dataFabricacao = dataFabricacao;
     }
-
     public void setDataVencimento(String dataVencimento) {
         this.dataVencimento = dataVencimento;
     }
@@ -27,12 +24,11 @@ public class Alimentos extends Produtos{
 /*
 Explicação:
 super() → chama o construtor da classe pai
-
-super.toString() → chama o método toString() da classe pai
-
+    super.toString() → chama o método toString() da classe pai
 Dica para o toString() da classe Alimentos:
-No método toString() da classe Alimentos, você pode chamar super.toString() para incluir as informações da classe pai e adicionar os atributos específicos.
-* */
+No método toString() da classe Alimentos, você pode chamar super.toString()
+ para incluir as informações da classe pai e adicionar os atributos específicos.
+*/
 //
 //    @Override
 //    public String toString() {
