@@ -132,7 +132,10 @@ public class Main {
                         }
                         break;
                     case 2:
-                        System.out.println("Você escolheu a opção 2 - Buscar produtos por código.");
+                        System.out.println("\nVocê escolheu a opção 2 - Buscar produtos por código.");
+                        System.out.print("Digite o código do produto a ser buscado: ");
+                        int cod = sc.nextInt();
+                        GerenciarProdutos.buscarProdutos(cod);
                         break;
                     case 3:
                         System.out.println("****Você escolheu a opção 3 - Remover produtos do estoque.****");
@@ -141,10 +144,10 @@ public class Main {
                         GerenciarProdutos.removerProdutos(codRemover);
                         break;
                     case 4:
-                        System.out.println("Você escolheu a opção 4 - Atualizar quantidade de produtos");
+                        System.out.println("\nVocê escolheu a opção 4 - Atualizar quantidade de produtos");
                         break;
                     case 5:
-                        System.out.println("Você escolheu a opção 5 - Listar produtos em estoque");
+                        System.out.println("\nVocê escolheu a opção 5 - Listar produtos em estoque");
                         GerenciarProdutos.listarProdutos();
                         break;
 

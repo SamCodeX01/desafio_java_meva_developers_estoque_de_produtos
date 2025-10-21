@@ -1,3 +1,4 @@
+import javax.swing.*;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -15,12 +16,42 @@ public class GerenciarProdutos {
             for(Produtos p: listaDeProdutos){
                 if(cod == p.getCodigo()){
                  listaDeProdutos.remove(p);  // ← Remove o OBJETO p, não o código
-                 System.out.println("Produto removido com sucesso! código: " + cod);
+                 System.out.println("Produto removido com sucesso!");
+                 System.out.println("Código: " + cod);
+                 System.out.println("Produto: " + p.getNomeProduto());
                  return; // Sai do método após remover
                 }
             }
             System.out.println("Produto não encontrado Código: " + cod);
         }
+
+       public static void buscarProdutos(int cod){
+            for(Produtos p: listaDeProdutos){
+                if(cod == p.getCodigo()){
+                    System.out.println(p.getCodigo());
+                    System.out.println(p.getNomeProduto());
+                    System.out.println(p.getPreço());
+                    System.out.println(p.getQtdEstoque());
+
+                    if(p instanceof Alimentos){
+                        System.out.println(((Alimentos) p).getDataFabricacao());
+                        System.out.println(((Alimentos) p).getDataVencimento());
+                    }
+                    if(p instanceof Eletronicos){
+                        System.out.println(((Eletronicos) p).getGarantiaMeses());
+                    }
+                    if(p instanceof Instrumentos){
+                        System.out.println(((Instrumentos) p).getTipo());
+                    }
+                    if(p instanceof Roupas){
+                        System.out.println(((Roupas) p).getTamanho());
+                    }
+                    if(p instanceof Roupas){
+                        System.out.println(((Roupas) p).getCor());
+                    }
+                }
+            }
+       }
 
         public static void listarProdutos(){
             for(Produtos p: listaDeProdutos){
