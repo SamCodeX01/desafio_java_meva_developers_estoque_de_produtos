@@ -145,6 +145,11 @@ public class Main {
                         break;
                     case 4:
                         System.out.println("\nVocê escolheu a opção 4 - Atualizar quantidade de produtos");
+                        System.out.print("\nDigite o código do produto em que deseja atualizar no estoque: ");
+                        int codAtualizar = sc.nextInt();
+                        System.out.print("\nDigite a quantidade a ser atualizada no estoque: ");
+                        int qtdAtualizar = sc.nextInt();
+                        GerenciarProdutos.atualizarQtdEstoque(codAtualizar, qtdAtualizar);
                         break;
                     case 5:
                         System.out.println("\nVocê escolheu a opção 5 - Listar produtos em estoque");

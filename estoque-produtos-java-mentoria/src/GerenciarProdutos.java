@@ -34,20 +34,18 @@ public class GerenciarProdutos {
                     System.out.println(p.getQtdEstoque());
 
                     if(p instanceof Alimentos){
-                        System.out.println(((Alimentos) p).getDataFabricacao());
-                        System.out.println(((Alimentos) p).getDataVencimento());
+                        System.out.println("Fabricação: " + ((Alimentos) p).getDataFabricacao());
+                        System.out.println("Data de Vencimento: " + ((Alimentos) p).getDataVencimento());
                     }
                     if(p instanceof Eletronicos){
-                        System.out.println(((Eletronicos) p).getGarantiaMeses());
+                        System.out.println("Garantia em Meses: " + ((Eletronicos) p).getGarantiaMeses());
                     }
                     if(p instanceof Instrumentos){
-                        System.out.println(((Instrumentos) p).getTipo());
+                        System.out.println("Tipo do instrumento: " + ((Instrumentos) p).getTipo());
                     }
                     if(p instanceof Roupas){
-                        System.out.println(((Roupas) p).getTamanho());
-                    }
-                    if(p instanceof Roupas){
-                        System.out.println(((Roupas) p).getCor());
+                        System.out.println("Tamanho: " + ((Roupas) p).getTamanho());
+                        System.out.println("Cor: " + ((Roupas) p).getCor());
                     }
                 }
             }
@@ -89,6 +87,20 @@ public class GerenciarProdutos {
 
             }
         }
+
+        /*3) Atualizar quantidade de produtos em estoque: O sistema deve permitir a
+    atualização da quantidade de produtos em estoque, seja para adicionar ou remover unidades.*/
+
+    public static void atualizarQtdEstoque(int cod, int valorInserir){
+        for(Produtos p: listaDeProdutos){
+            if(cod == p.getCodigo()){
+                int estoqueTotal = p.getQtdEstoque() + valorInserir;
+                System.out.println("Você atualizou em " + valorInserir + " o estoque de " + p.getNomeProduto() + ".");
+                System.out.println("Quantidade Total do Estoque de " + p.getNomeProduto() + ": " + estoqueTotal + " unidades.");
+            }
+        }
+
+    }
 
 }
 
