@@ -29,7 +29,7 @@ public class Main {
                 int opcao = sc.nextInt();
 
                 if (opcao < 1 || opcao > 6) {
-                    System.out.println("Digite uma opção de 1 a 6");
+                    System.out.println("\n*****Atenção!!! Digite uma opção de 1 a 6*****");
                     continue; //volta para o inicio do loop
                 }
 
@@ -50,6 +50,9 @@ public class Main {
                                 "4 - Roupas
                                 """);
                         System.out.print("Digite uma opção: ");
+                        if(sc.hasNextInt()){
+                            System.out.println("vc digitou um inteiro!!!");
+                        }
                         int op = sc.nextInt();
 
                         switch (op) {

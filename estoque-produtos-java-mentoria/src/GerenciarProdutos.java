@@ -99,9 +99,8 @@ public class GerenciarProdutos {
                 System.out.println("Quantidade Total do Estoque de " + p.getNomeProduto() + ": " + estoqueTotal + " unidades.");
             }
         }
-    }
 
-    public static void validarEntradas(String inputUsuario){}
+    }
 
 }
 
