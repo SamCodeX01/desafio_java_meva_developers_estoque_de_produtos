@@ -57,7 +57,8 @@ public class GerenciarProdutos {
            System.out.println("Produto não encontrado! Código: " + cod);
 
        }
-
+        /*Abaixo, a variável p está se comportando de forma polimórfica —
+        o mesmo tipo de referência (Produtos) aponta para objetos de subclasses diferentes.*/
         public static void listarProdutos(){
             for(Produtos p: listaDeProdutos){
                 System.out.println("------------------------");
@@ -67,6 +68,8 @@ public class GerenciarProdutos {
                 System.out.println("Estoque: " + p.getQtdEstoque());
 
                 //Verifica o tipo específico do produto
+                /*Abaixo o código verifica manualmente o tipo real e faz casting.
+                Indicando que o polimorfismo está sendo usado.*/
                 if(p instanceof Alimentos){//Se p for uma instância de Alimentos, se p pertence à família Alimentos, verifica se o produto p é da classe Alimentos
                     Alimentos alimento = (Alimentos) p; //Uma variável do tipo Alimentos chamada 'alimento', que recebe o casting (Alimentos) que converte o p em Alimentos"
                     System.out.println("Data de Fabricação: " + alimento.getDataFabricacao());
