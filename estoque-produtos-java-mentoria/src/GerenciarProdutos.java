@@ -1,6 +1,8 @@
 import javax.swing.*;
 import java.util.ArrayList;
+import java.util.InputMismatchException;
 import java.util.List;
+import java.util.Scanner;
 
 public class GerenciarProdutos {
 
@@ -47,8 +49,13 @@ public class GerenciarProdutos {
                         System.out.println("Tamanho: " + ((Roupas) p).getTamanho());
                         System.out.println("Cor: " + ((Roupas) p).getCor());
                     }
+                    System.out.println("==========================");
+                    return;
                 }
+
             }
+           System.out.println("Produto não encontrado! Código: " + cod);
+
        }
 
         public static void listarProdutos(){
@@ -95,12 +102,42 @@ public class GerenciarProdutos {
         for(Produtos p: listaDeProdutos){
             if(cod == p.getCodigo()){
                 int estoqueTotal = p.getQtdEstoque() + valorInserir;
+                p.setQtdEstoque(estoqueTotal); //Atualiza o estoque no objeto
+                System.out.println("Estoque atualizado com sucesso!");
+                System.out.println("Você " + (valorInserir >= 0 ? "Inseriu": "removeu") + " um produto");
                 System.out.println("Você atualizou em " + valorInserir + " o estoque de " + p.getNomeProduto() + ".");
                 System.out.println("Quantidade Total do Estoque de " + p.getNomeProduto() + ": " + estoqueTotal + " unidades.");
+                return;
             }
         }
-
+        System.out.println("Produto não encontrado! " + cod);
     }
 
-}
+    public static int lerInteiro(Scanner sc) {
+        while (true) {
+            if (!sc.hasNextInt()) {
+                System.out.print("Digite apenas números inteiros: ");
+                sc.next();//Limpa o buffer
+                continue;
+            }
+            int valor = sc.nextInt();
+            sc.nextLine(); //limpa o buffer
+            return valor;
+        }
+    }
+
+        public static double lerDouble(Scanner sc) {
+            while (true) {
+                if (!sc.hasNextDouble()) {
+                    System.out.print("Digite um valor numérico válido: ");
+                    sc.next(); // Limpa o buffer
+                    continue;
+                }
+                double valor = sc.nextDouble();
+                sc.nextLine(); // Limpa o buffer do enter
+                return valor;
+            }
+        }
+    }
+
 
