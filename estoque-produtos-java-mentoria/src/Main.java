@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.InputMismatchException;
 import java.util.List;
 import java.util.Scanner;
 
@@ -65,14 +66,13 @@ public class Main {
                                 System.out.print("Digite o nome do alimento: ");
                                     nomeAlimento = sc.next();
 
-
                                 System.out.print("Digite o preço do produto: ");
 //                                    precoAlimento = sc.nextDouble();
                                     precoAlimento = GerenciarProdutos.lerDouble(sc);
 
 
                                 System.out.print("Digite quantos adicionar ao estoque: ");
-                                    qtdEstoqueAlimento = sc.nextInt();
+                                    qtdEstoqueAlimento = GerenciarProdutos.lerInteiro(sc);
                                 System.out.print("Digite a data de Fabricação: ");
                                     dataFabricacaoAlimento = sc.next();
                                 System.out.print("Digite a data de vencimento: ");
@@ -90,14 +90,11 @@ public class Main {
                                 System.out.print("Digite o nome do produto: ");
                                     nomeEletronico = sc.next();
 
-
                                 System.out.print("Digite o preço do produto: ");
-                                    precoEletronico = sc.nextDouble();
-
-
+                                    precoEletronico = GerenciarProdutos.lerDouble(sc);
 
                                 System.out.print("Digite quantos adicionar ao estoque: ");
-                                    qtdEstoqueEletronico = sc.nextInt();
+                                    qtdEstoqueEletronico = GerenciarProdutos.lerInteiro(sc);
                                 System.out.print("Digite o tempo de garantia em meses: ");
                                     garantiaMeses = sc.nextInt();
 
@@ -113,9 +110,9 @@ public class Main {
                                 System.out.print("Digite o produto: ");
                                     nomeInstrumento = sc.next();
                                 System.out.print("Digite o preço do produto: ");
-                                    precoInstrumento = sc.nextDouble();
+                                    precoInstrumento = GerenciarProdutos.lerDouble(sc);
                                 System.out.print("Digite quantos adicionar ao estoque: ");
-                                    qtdEstoqueInstrumento = sc.nextInt();
+                                    qtdEstoqueInstrumento = GerenciarProdutos.lerInteiro(sc);
                                 System.out.print("Digite o tipo do Instrumento: ");
                                    tipoInstrumento = sc.next();
 
@@ -124,20 +121,20 @@ public class Main {
                                 break;
                             case 4:
                                 System.out.println("\n****Você escolheu adicionar Roupas!****\n");
-                                String nomeRoupa, corRoupa;
-                                float precoRoupa, tamanhoRoupa;
+                                String nomeRoupa, corRoupa="";
+                                double precoRoupa, tamanhoRoupa;
                                 int qtdEstoqueRoupa;
 
                                 System.out.print("Digite o produto: ");
                                     nomeRoupa = sc.next();
                                 System.out.print("Digite o preço do produto: ");
-                                    precoRoupa = sc.nextFloat();
+                                    precoRoupa = GerenciarProdutos.lerDouble(sc);
                                 System.out.print("Digite quantos adicionar ao estoque: ");
                                     qtdEstoqueRoupa = sc.nextInt();
                                 System.out.print("Digite quantos adicionar ao estoque: ");
-                                    tamanhoRoupa = sc.nextFloat();
+                                    tamanhoRoupa = GerenciarProdutos.lerDouble(sc);
                                 System.out.print("Digite quantos adicionar ao estoque: ");
-                                    corRoupa = sc.next();
+                                    GerenciarProdutos.lerInteiro(sc);
 
                                 Roupas roupas = new Roupas(nomeRoupa, precoRoupa, qtdEstoqueRoupa, tamanhoRoupa, corRoupa);
                                 GerenciarProdutos.adicionarProdutos(roupas);
@@ -180,7 +177,7 @@ public class Main {
 //                    GerenciarProdutos.adicionarProdutos(new Eletronicos(nomeProduto, preco, qtdEstoque, garantiaMeses));
 //                   double preço, int qtdEstoque, int garantiaMeses
                 }
-            } catch (java.util.InputMismatchException e) {// "e" - É como uma variável que guarda informações sobre o erro
+            } catch (InputMismatchException e) {// "e" - É como uma variável que guarda informações sobre o erro
                 System.out.println("Erro: Digite apenas números de 1 a 6!");
                 sc.next(); //limpa o "buffer" do scanner para o que foi digitado não ficar preso no Scanner, se não fizer isso, o programa fica em loop infinito travado
 
