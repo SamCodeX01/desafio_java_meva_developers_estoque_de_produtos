@@ -69,8 +69,6 @@ public class Main {
                                 System.out.print("Digite o preço do produto: ");
 //                                    precoAlimento = sc.nextDouble();
                                     precoAlimento = GerenciarProdutos.lerDouble(sc);
-
-
                                 System.out.print("Digite quantos adicionar ao estoque: ");
                                     qtdEstoqueAlimento = GerenciarProdutos.lerInteiro(sc);
                                 System.out.print("Digite a data de Fabricação: ");
@@ -89,14 +87,13 @@ public class Main {
 
                                 System.out.print("Digite o nome do produto: ");
                                     nomeEletronico = sc.next();
-
                                 System.out.print("Digite o preço do produto: ");
                                     precoEletronico = GerenciarProdutos.lerDouble(sc);
-
                                 System.out.print("Digite quantos adicionar ao estoque: ");
                                     qtdEstoqueEletronico = GerenciarProdutos.lerInteiro(sc);
                                 System.out.print("Digite o tempo de garantia em meses: ");
                                     garantiaMeses = sc.nextInt();
+                                System.out.print(" meses");
 
                                 Eletronicos eletronicos = new Eletronicos(nomeEletronico, precoEletronico, qtdEstoqueEletronico, garantiaMeses);
                                 GerenciarProdutos.adicionarProdutos(eletronicos);
@@ -121,8 +118,8 @@ public class Main {
                                 break;
                             case 4:
                                 System.out.println("\n****Você escolheu adicionar Roupas!****\n");
-                                String nomeRoupa, corRoupa="";
-                                double precoRoupa, tamanhoRoupa;
+                                String nomeRoupa, tamanhoRoupa, corRoupa="";
+                                double precoRoupa;
                                 int qtdEstoqueRoupa;
 
                                 System.out.print("Digite o produto: ");
@@ -131,8 +128,8 @@ public class Main {
                                     precoRoupa = GerenciarProdutos.lerDouble(sc);
                                 System.out.print("Digite quantos adicionar ao estoque: ");
                                     qtdEstoqueRoupa = sc.nextInt();
-                                System.out.print("Digite quantos adicionar ao estoque: ");
-                                    tamanhoRoupa = GerenciarProdutos.lerDouble(sc);
+                                System.out.print("Digite quantos o tamanho da Roupa: ");
+                                    tamanhoRoupa = sc.next();
                                 System.out.print("Digite quantos adicionar ao estoque: ");
                                     GerenciarProdutos.lerInteiro(sc);
 

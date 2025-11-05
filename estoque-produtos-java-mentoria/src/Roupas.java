@@ -1,22 +1,21 @@
 
     public class Roupas extends Produtos{
-        private double tamanho;
+        private String tamanho;
         private String cor;
 
-        public Roupas(String nomeProduto, double preço,
-                      int qtdEstoque, double tamanho, String cor) {
+        public Roupas(String nomeProduto, double preço, int qtdEstoque, String tamanho, String cor) {
             super(nomeProduto, preço, qtdEstoque);
             this.tamanho = tamanho;
             this.cor = cor;
         }
 
-        public double getTamanho() {
+        public String getTamanho() {
             return tamanho;
         }
         public String getCor() {
             return cor;
         }
-        public void setTamanho(float tamanho) {
+        public void setTamanho(String tamanho) {
             this.tamanho = tamanho;
         }
         public void setCor(String cor) {
