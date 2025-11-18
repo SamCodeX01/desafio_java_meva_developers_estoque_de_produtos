@@ -35,8 +35,8 @@ public class GerenciarProdutos {
                     System.out.println(p.getPreço());
                     System.out.println(p.getQtdEstoque());
 
-                    if(p instanceof Alimentos){
-                        System.out.println("Fabricação: " + ((Alimentos) p).getDataFabricacao());
+                    if(p instanceof Alimentos){ // se p é uma instância da classe Alimentos ou dê sua subclasse
+                        System.out.println("Fabricação: " + ((Alimentos) p).getDataFabricacao()); //((Alimentos) p) Converte o p para o tipo Alimentos
                         System.out.println("Data de Vencimento: " + ((Alimentos) p).getDataVencimento());
                     }
                     if(p instanceof Eletronicos){

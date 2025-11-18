@@ -54,32 +54,6 @@ public class Produtos {
         System.out.println("Tipo 1");
     }
 
-//    @Override
-//    public String toString() {
-//        return "Produtos{" +
-//                "codigo=" + codigo +
-//                ", nomeProduto='" + nomeProduto + '\'' +
-//                ", preço=" + preço +
-//                ", qtdEstoque=" + qtdEstoque +
-//                '}';
-//    }
-
-    //Métodos/Funçoes
-
-//    public String adicionarProdutos(){
-//        return "System.out.println()";
-//    };
-//    public void removerProdutos();
-//    public void listarProdutos();
-//    public void buscarProdutos();
-//    public void atualizarQuantidade();
-//
-//    public void verificarGarantia();
-//
-//    public void verificarValidade();
-
-
-
 }
 
 

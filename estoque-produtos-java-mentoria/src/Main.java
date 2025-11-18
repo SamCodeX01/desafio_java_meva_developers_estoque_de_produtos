@@ -27,8 +27,8 @@ public class Main {
                     """);
             System.out.print("Digite uma opção: ");
             try {
-                int opcao = sc.nextInt();
 
+                int opcao = sc.nextInt();
                 if (opcao < 1 || opcao > 6) {
                     System.out.println("\n*****Atenção!!! Digite uma opção de 1 a 6*****");
                     continue; //volta para o inicio do loop
@@ -51,7 +51,7 @@ public class Main {
                                 "4 - Roupas
                                 """);
                         System.out.print("Digite uma opção: ");
-                        if(sc.hasNextInt()){
+                        if(sc.hasNextInt()){ //verifca se o dado é um inteiro, não consome valor
                             System.out.println("vc digitou um inteiro!!!");
                         }
                         int op = sc.nextInt();
@@ -67,7 +67,6 @@ public class Main {
                                     nomeAlimento = sc.next();
 
                                 System.out.print("Digite o preço do produto: ");
-//                                    precoAlimento = sc.nextDouble();
                                     precoAlimento = GerenciarProdutos.lerDouble(sc);
                                 System.out.print("Digite quantos adicionar ao estoque: ");
                                     qtdEstoqueAlimento = GerenciarProdutos.lerInteiro(sc);
@@ -137,7 +136,7 @@ public class Main {
                                 GerenciarProdutos.adicionarProdutos(roupas);
                                 break;
                         }
-                        break;
+                        break; //Fim do case 1
                     case 2:
                         System.out.println("\nVocê escolheu a opção 2 - Buscar produtos por código.");
                         System.out.print("Digite o código do produto a ser buscado: ");
@@ -163,16 +162,6 @@ public class Main {
                         GerenciarProdutos.listarProdutos();
                         break;
 
-//                    System.out.println("Função Adicionar");
-//                    System.out.println("\n*** Adicione um produto *** ");
-//
-//                    System.out.print("Adicione um Produto: "); String nomeProduto = sc.next();
-//                    System.out.print("Adicione um Preço: "); double preco = sc.nextDouble();
-//                    System.out.print("Adicione a qtd de estoque: "); int qtdEstoque = sc.nextInt();
-//                    GerenciarProdutos.adicionarProdutos(new Produtos(nomeProduto, preco, qtdEstoque));
-//
-//                    GerenciarProdutos.adicionarProdutos(new Eletronicos(nomeProduto, preco, qtdEstoque, garantiaMeses));
-//                   double preço, int qtdEstoque, int garantiaMeses
                 }
             } catch (InputMismatchException e) {// "e" - É como uma variável que guarda informações sobre o erro
                 System.out.println("Erro: Digite apenas números de 1 a 6!");

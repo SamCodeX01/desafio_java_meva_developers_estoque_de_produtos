@@ -18,10 +18,5 @@ public  class Eletronicos extends Produtos  {
         this.garantiaMeses = garantiaMeses;
     }
 
-    @Override
-    public void emitirSom() {
-        System.out.println("Tipo 2");
-    }
-
 
 }
